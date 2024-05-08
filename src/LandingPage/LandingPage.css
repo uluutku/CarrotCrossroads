@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Press Start 2P", cursive; /* Retro 8-bit style font */
+}
+
+/* Full page landing with snap scroll effect */
+.landing-page {
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+.landing-page > section {
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-title-container {
+  width: 60%;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.575); /* Dark background for contrast */
+  backdrop-filter: blur(5px); /* Soft blur for aesthetic effect */
+  border-radius: 10px;
+  margin: 50px auto; /* Centering the container */
+  margin-top: -50px;
+}
+
+.hero-title-text {
+  color: #ffffff; /* Bright color for readability */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); /* Shadow for depth */
+  font-size: 2.5rem; /* Larger text for impact */
+  text-align: center;
+}
+
+/* Hero section */
+.hero-section {
+  background: url("../assets/hero-section-crossroad.jpg") center/cover no-repeat;
+  color: white;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Info cards with modern blur effect */
+.info-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.65
+  ); /* Semi-transparent black background for better readability */
+  backdrop-filter: blur(8px); /* Soft blur effect */
+  border-radius: 10px;
+  padding: 30px; /* Increased padding for better spacing */
+  width: 25vw;
+  min-height: 25vh;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-size: 1rem; /* Adjust font size as necessary */
+  line-height: 1.6; /* Increased line height for better legibility */
+  letter-spacing: 0.05em; /* Slight increase in letter spacing */
+  text-align: left;
+  transition: transform 0.3s ease-in-out; /* Smooth transition for hover effects */
+}
+
+.info-card h2,
+.info-card p {
+  margin-bottom: 15px; /* Adding margin to separate headings and paragraphs */
+}
+
+.info-card h2 {
+  font-size: 1.2rem;
+  font-weight: bold; /* Bolder font for headings */
+  color: #e2e2e2; /* Slightly lighter color for headings */
+}
+
+.info-card:hover {
+  transform: scale(
+    1.05
+  ); /* Slight scale up on hover for interactive feedback */
+}
+
+.left {
+  align-self: flex-start;
+  margin-left: 10%;
+}
+
+.right {
+  align-self: flex-end;
+  margin-right: 10%;
+}
+
+.start-game-btn {
+  width: auto;
+  padding: 15px 30px;
+  font-size: 20px;
+  background-color: #222281;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+  outline: none;
+}
+
+.start-game-btn:hover,
+.start-game-btn:focus {
+  background-color: darkblue;
+  transform: scale(1.1);
+}
+
+/* Responsive Design for mobile devices */
+@media (max-width: 768px) {
+  .info-card {
+    width: 90%; /* Make cards take more space */
+    margin: 0 auto; /* Center cards */
+  }
+
+  .hero-section,
+  .landing-page > section {
+    justify-content: space-around;
+  }
+
+  .start-game-btn {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+}
+
+/* Pre-loader styles */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

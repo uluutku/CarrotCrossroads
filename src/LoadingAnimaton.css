@@ -1,0 +1,59 @@
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Dim the background */
+  backdrop-filter: blur(8px); /* Blur effect for the content behind */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* High z-index to cover other content */
+  opacity: 0; /* Initial opacity */
+  visibility: hidden; /* Initially hidden */
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.loading-overlay.show {
+  opacity: 1; /* Show by changing opacity */
+  visibility: visible; /* Show by changing visibility */
+}
+
+.loading-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: white;
+  padding: 20px;
+  animation: bounceScale 0.6s infinite alternate;
+}
+
+.loading-animation {
+  width: 100%;
+  height: 100%;
+  border-radius: 500px;
+  height: auto;
+  position: absolute;
+  z-index: 1;
+}
+
+.loading-text {
+  font-size: 16px;
+  font-weight: bold;
+  color: #d3d2d2;
+  margin-top: 50px;
+}
+
+@keyframes bounceScale {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
