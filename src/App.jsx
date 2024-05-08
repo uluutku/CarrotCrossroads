@@ -6,7 +6,10 @@ function App() {
   return (
     <>
       <Header />
-      <LandingPage />
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/game" element={<MoviesPage />} />
+      </Routes>
       <Footer />
     </>
   );
