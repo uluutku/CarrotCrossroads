@@ -23,13 +23,13 @@
 }
 
 .hero-title-container {
-  width: 60%;
+  width: 70%;
   padding: 20px;
   background: rgba(0, 0, 0, 0.575); /* Dark background for contrast */
   backdrop-filter: blur(5px); /* Soft blur for aesthetic effect */
   border-radius: 10px;
   margin: 50px auto; /* Centering the container */
-  margin-top: -50px;
+  margin-top: 0px;
 }
 
 .hero-title-text {
@@ -104,8 +104,9 @@
 
 .start-game-btn {
   width: auto;
+  margin-top: 20px;
   padding: 15px 30px;
-  font-size: 20px;
+  font-size: 1.2rem;
   background-color: #222281;
   color: white;
   border: none;
@@ -121,43 +122,46 @@
   transform: scale(1.1);
 }
 
-/* Responsive Design for mobile devices */
 @media (max-width: 768px) {
+  .hero-title-container {
+    margin-top: 5vh;
+    border-radius: 10px;
+    height: 20vh;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 80%; /* Adjust width for better mobile view */
+    padding: 10px;
+  }
+
   .info-card {
-    width: 90%; /* Make cards take more space */
-    margin: 0 auto; /* Center cards */
+    padding: 30px; /* Increased padding for better spacing */
+    width: 90%;
+    min-height: 45vh;
+    font-size: 1rem; /* Adjust font size as necessary */
+    line-height: 1.6; /* Increased line height for better legibility */
+    letter-spacing: 0.08em; /* Slight increase in letter spacing */
+    text-align: left;
+    transition: transform 0.3s ease-in-out; /* Smooth transition for hover effects */
+    margin: 0 auto;
+  }
+
+  .hero-title-text {
+    font-size: 1.7rem;
+    text-align: center;
   }
 
   .hero-section,
   .landing-page > section {
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 
   .start-game-btn {
-    font-size: 16px;
+    margin-top: 18px;
+    font-size: 24px;
     padding: 12px 24px;
   }
-}
-
-/* Pre-loader styles */
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.loader {
-  border: 16px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 16px solid #3498db;
-  width: 120px;
-  height: 120px;
-  animation: spin 2s linear infinite;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
 }

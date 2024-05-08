@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import LoadingAnimation from "../LoadingAnimation";
 import "./LandingPage.css";
 
@@ -15,7 +16,9 @@ function LandingPage() {
             Make choices that define your path in the magical world of
             CarrotCrossroads.
           </p>
-          <button className="start-game-btn">Start Game</button>
+          <Link to="/game">
+            <button className="start-game-btn">Start Game</button>
+          </Link>
         </div>
       </section>
       <section className="features-section">
