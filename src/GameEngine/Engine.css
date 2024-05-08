@@ -1,0 +1,126 @@
+body {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #2d004e; /* Deep purple background for body */
+  color: #f7f7f7; /* Light grey text color for contrast */
+  min-height: 100vh;
+}
+
+.game-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.game-page .game-container {
+  font-family: "Press Start 2P", system-ui;
+  color: #f7f7f7;
+  background: #12152b; /* Dark purple background for game container */
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(50, 30, 60, 0.5); /* Purple shadow for depth */
+  border-radius: 20px;
+}
+
+header {
+  background: #4b0082; /* Indigo header background */
+  color: #f7f7f7;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 24px;
+  margin-bottom: 5vh;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.stats p {
+  margin: 0 10;
+  font-size: 16px;
+  color: #f7f7f7; /* Light grey text for stats to stand out */
+}
+
+.loading {
+  font-size: 18px;
+  color: #f7f7f7;
+  background-color: #5a009d; /* A lighter shade of purple for loading */
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  animation: blinker 1.5s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+section {
+  margin-top: 20px;
+}
+
+.game-over {
+  font-size: 24px;
+  color: #f7f7f7;
+  background-color: #5a009d; /* A lighter shade of purple for game over */
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  animation: bounce 1s infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .stats {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stats p {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+}
+
+/* Animations and Transitions */
+.stats p {
+  transition: transform 0.2s ease-in-out;
+}
+
+.stats p:hover {
+  transform: scale(1.1);
+}
+
+.game-container {
+  background-image: url("8bit-background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Add more styles as needed */
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}

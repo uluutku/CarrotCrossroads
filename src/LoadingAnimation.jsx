@@ -8,7 +8,7 @@ const LoadingAnimation = () => {
   // Simulate loading completion after 3 seconds
   setTimeout(() => {
     setIsLoading(false);
-  }, 3000);
+  }, 2000);
 
   return (
     <div className={`loading-overlay ${isLoading ? "show" : "hide"}`}>

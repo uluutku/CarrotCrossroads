@@ -42,7 +42,7 @@ function Header() {
             </Link>
           </li>
           <li>
-            <Link to="/movies" className="nav-link">
+            <Link to="/game" className="nav-link">
               Crossroads
             </Link>
           </li>
