@@ -107,6 +107,7 @@
 }
 
 .start-game-btn {
+  font-family: "Press Start 2P", system-ui;
   width: auto;
   margin-top: 20px;
   padding: 15px 30px;
