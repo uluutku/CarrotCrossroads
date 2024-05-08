@@ -83,7 +83,12 @@
 .info-card h2 {
   font-size: 1.2rem;
   font-weight: bold; /* Bolder font for headings */
-  color: #e2e2e2; /* Slightly lighter color for headings */
+  color: #c7a33f; /* Slightly lighter color for headings */
+}
+
+.info-card p {
+  font-size: 1rem;
+  color: #e4e4e4; /* Slightly lighter color for headings */
 }
 
 .info-card:hover {

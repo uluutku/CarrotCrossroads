@@ -13,8 +13,8 @@ function LandingPage() {
         <div className="info-card left">
           <h2>Embark on Your Journey</h2>
           <p>
-            Make choices that define your path in the magical world of
-            CarrotCrossroads.
+            Make choices that define your path in the magical world of Carrot
+            Crossroads.
           </p>
           <Link to="/game">
             <button className="start-game-btn">Start Game</button>
