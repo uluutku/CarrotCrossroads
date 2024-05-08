@@ -29,7 +29,7 @@ function Header() {
       <div className="header" ref={headerRef}>
         <div className="logo-container">
           <Link to="/" className="logo-link">
-            <p className="logo-item">🐰 RABBITFLIX</p>
+            <p className="logo-item">🐰 Carrot Crossroads</p>
           </Link>
         </div>
         <div className="menu-toggle" onClick={toggleMenu}>
@@ -38,12 +38,12 @@ function Header() {
         <ul className={`menu ${menuOpen ? "open" : ""}`}>
           <li>
             <Link to="/" className="nav-link">
-              Anasayfa
+              Home
             </Link>
           </li>
           <li>
             <Link to="/movies" className="nav-link">
-              Filmler
+              Crossroads
             </Link>
           </li>
         </ul>

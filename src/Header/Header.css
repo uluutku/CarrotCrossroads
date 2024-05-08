@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&family=Shadows+Into+Light&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
 
 * {
   margin: 0;
@@ -8,9 +7,9 @@
 }
 
 body {
-  font-family: "Inter", sans-serif;
-  background-color: #141414;
-  color: rgba(255, 255, 255, 0.87);
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
 a {
@@ -50,10 +49,10 @@ a {
 
 .logo-item {
   font-size: 1.5rem;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "Luckiest Guy", cursive;
   font-weight: 400;
   font-style: normal;
-  color: #e50914;
+  color: #eaa121;
   margin-right: 10px;
 }
 
@@ -91,16 +90,15 @@ a {
 
 .nav-link,
 .nav-item {
-  font-family: "Rowdies", sans-serif;
-  font-weight: 300;
+  font-weight: 100;
   color: #fff;
-  font-size: 1.2rem;
+  font-size: 1rem;
   transition: color 0.3s ease-in-out;
 }
 
 .nav-link:hover,
 .nav-item:hover {
-  color: #e50914;
+  color: #eaa121;
 }
 
 @media only screen and (max-width: 768px) {
