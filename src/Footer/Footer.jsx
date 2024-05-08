@@ -9,14 +9,13 @@ function Footer() {
     <div className="footer-container">
       <div className="nav-container">
         <div className="nav-links">
-          <Link to="/">Ana Sayfa</Link>
-          <Link to="/movies">Filmler</Link>
-          <Link to="/movies">Diziler</Link>
+          <Link to="/">Home</Link>
+          <Link to="/game">Crossroads</Link>
         </div>
       </div>
       <div className="copyright-text">
         <p>
-          &copy; 2024 RabbitFlix. Made with ❤️ by{" "}
+          &copy; 2024 Carrot Crossroads. Made with ❤️ by{" "}
           <a
             href="http://uxu.epizy.com/sites/iPortfolio/index.html"
             target="_blank"
