@@ -24,17 +24,17 @@
 .hero-title-container {
   width: 70%;
   padding: 20px;
-  background: rgba(0, 0, 0, 0.575); /* Dark background for contrast */
-  backdrop-filter: blur(5px); /* Soft blur for aesthetic effect */
+  background: rgba(0, 0, 0, 0.575);
+  backdrop-filter: blur(5px);
   border-radius: 10px;
-  margin: 50px auto; /* Centering the container */
+  margin: 50px auto;
   margin-top: 0px;
 }
 
 .hero-title-text {
-  color: #ffffff; /* Bright color for readability */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); /* Shadow for depth */
-  font-size: 2.5rem; /* Larger text for impact */
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+  font-size: 2.5rem;
   text-align: center;
 }
 
@@ -91,9 +91,7 @@
 }
 
 .info-card:hover {
-  transform: scale(
-    1.05
-  ); /* Slight scale up on hover for interactive feedback */
+  transform: scale(1.05);
 }
 
 .left {
@@ -112,7 +110,7 @@
   margin-top: 20px;
   padding: 15px 30px;
   font-size: 1.2rem;
-  background-color: #222281;
+  background-color: #6b9322f2;
   color: white;
   border: none;
   border-radius: 5px;
@@ -139,7 +137,6 @@
 .reviews-section {
   background: url("../assets/reviews-section.jpg") center/cover no-repeat;
   color: white;
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -162,13 +159,19 @@
   align-items: center;
   min-height: 30vh;
   background-color: #0e121ce3;
-  border: 2px solid #ccc;
+  border: 2px solid #cccccc79;
   border-radius: 8px;
   backdrop-filter: blur(5px);
   width: 30%;
 }
 
 @media (max-width: 768px) {
+  .landing-page > section {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
   .hero-title-container {
     margin-top: 5vh;
     border-radius: 10px;
@@ -177,18 +180,19 @@
     text-align: center;
     justify-content: center;
     align-items: center;
-    width: 80%; /* Adjust width for better mobile view */
+    width: 90%;
     padding: 10px;
   }
 
   .info-card {
+    width: 90%;
     padding: 30px;
     width: 90%;
-    min-height: 45vh;
+    min-height: 40vh;
     border: 2px solid #ccc;
     font-size: 1rem;
     line-height: 1.6;
-    text-align: left;
+    text-align: center;
     transition: transform 0.3s ease-in-out;
     margin: 0 auto;
   }
@@ -221,15 +225,15 @@
   }
 
   .review-card {
-    margin-top: 3vh;
+    margin-top: 2vh;
     min-width: 80vw;
     min-height: 10vh;
     background-color: #0e121ce3;
     border: 2px solid #ccc;
     border-radius: 8px;
-    padding: 10px;
+    padding: 5px;
     backdrop-filter: blur(5px);
-    width: 30%;
+    width: 90%;
   }
 
   .review-card h3 {
@@ -239,6 +243,6 @@
   .review-card p {
     margin-top: 20px;
     font-size: 1em;
-    line-height: 1.5;
+    line-height: 1.1;
   }
 }
