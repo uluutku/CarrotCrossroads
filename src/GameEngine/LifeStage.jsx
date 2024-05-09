@@ -1,4 +1,3 @@
-import React from "react";
 import "./LifeStage.css";
 
 function LifeStage({ choices, onDecision }) {

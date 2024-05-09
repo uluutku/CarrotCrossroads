@@ -8,6 +8,7 @@ body {
 }
 
 .game-page {
+  background: url("../assets/engine-background.jpg") center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,7 +18,7 @@ body {
 .game-page .game-container {
   font-family: "Press Start 2P", system-ui;
   color: #f7f7f7;
-  background: #12152b; /* Dark purple background for game container */
+  background: #12152bd2;
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
@@ -26,7 +27,7 @@ body {
 }
 
 header {
-  background: #4b0082; /* Indigo header background */
+  background: #17022796;
   color: #f7f7f7;
   padding: 10px 20px;
   border-radius: 5px;
@@ -53,7 +54,7 @@ header h1 {
 .loading {
   font-size: 18px;
   color: #f7f7f7;
-  background-color: #5a009d; /* A lighter shade of purple for loading */
+  background-color: #70c822d0; /* A lighter shade of purple for loading */
   padding: 10px;
   border-radius: 5px;
   text-align: center;
@@ -89,12 +90,13 @@ header h1 {
 }
 
 .restart-button {
-  padding: 10px 20px;
+  font-family: "Press Start 2P", system-ui;
+  padding: 10px 40px;
   font-size: 1.2em;
   color: #fff;
-  background-color: #007bff;
+  background-color: #797215;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
@@ -116,7 +118,7 @@ section {
 .game-over {
   font-size: 24px;
   color: #f7f7f7;
-  background-color: #5a009d; /* A lighter shade of purple for game over */
+  background-color: #5a009d;
   padding: 10px;
   border-radius: 5px;
   text-align: center;
@@ -134,6 +136,21 @@ section {
     font-size: 14px;
     margin-bottom: 5px;
   }
+
+  .money-out-warning p {
+    font-size: 0.9em; /* Adjust font size for smaller screens */
+  }
+
+  .money-out-warning img {
+    width: 80%; /* Adjust image size for smaller screens */
+  }
+
+  .restart-button {
+    margin-top: 3vh;
+    padding: 20px 30px; /* Adjust button padding for smaller screens */
+    font-size: 0.9em; /* Adjust button font size for smaller screens */
+    width: 80%;
+  }
 }
 
 /* Animations and Transitions */
@@ -145,13 +162,16 @@ section {
   transform: scale(1.1);
 }
 
-.game-container {
-  background-image: url("8bit-background.png");
-  background-size: cover;
-  background-repeat: no-repeat;
+.restart-button:hover {
+  background-color: #0056b3;
 }
 
-/* Add more styles as needed */
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
 @keyframes bounce {
   0%,
   20%,

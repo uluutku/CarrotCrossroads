@@ -40,7 +40,7 @@
 
 /* Hero section */
 .hero-section {
-  background: url("../assets/hero-section-crossroad.jpg") center/cover no-repeat;
+  background: url("../assets/rabbit-hero-v3.jpg") center/cover no-repeat;
   color: white;
   position: relative;
   display: flex;
@@ -127,6 +127,24 @@
   transform: scale(1.1);
 }
 
+.features-section {
+  background: url("../assets/features-section.jpg") center/cover no-repeat;
+  color: white;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reviews-section {
+  background: url("../assets/reviews-section.jpg") center/cover no-repeat;
+  color: white;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media (max-width: 768px) {
   .hero-title-container {
     margin-top: 5vh;
@@ -141,14 +159,14 @@
   }
 
   .info-card {
-    padding: 30px; /* Increased padding for better spacing */
+    padding: 30px;
     width: 90%;
     min-height: 45vh;
-    font-size: 1rem; /* Adjust font size as necessary */
-    line-height: 1.6; /* Increased line height for better legibility */
-    letter-spacing: 0.08em; /* Slight increase in letter spacing */
+    border: 2px solid #ccc;
+    font-size: 1rem;
+    line-height: 1.6;
     text-align: left;
-    transition: transform 0.3s ease-in-out; /* Smooth transition for hover effects */
+    transition: transform 0.3s ease-in-out;
     margin: 0 auto;
   }
 
@@ -169,4 +187,30 @@
     font-size: 24px;
     padding: 12px 24px;
   }
+}
+
+.review-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.review-card {
+  background-color: #0e121ce3;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  backdrop-filter: blur(5px);
+  width: 30%;
+}
+
+.review-card h3 {
+  color: #bbed5f;
+}
+
+.review-card p {
+  margin-top: 20px;
+  font-size: 1em;
+  line-height: 1.5;
 }

@@ -28,8 +28,6 @@ function LandingPage() {
             Dive into unique challenges and magical adventures awaiting you!
           </p>
         </div>
-        <h2>Game Features</h2>
-        <p>Explore the magical world of decisions and consequences.</p>
       </section>
       <section className="reviews-section">
         <div className="info-card left">
@@ -39,11 +37,23 @@ function LandingPage() {
             in our game.
           </p>
         </div>
-        <h2>Player Reviews</h2>
-        <p>
-          &quot;An enchanting and engaging game that tests your decision-making
-          skills!&quot;
-        </p>
+        <div className="review-container">
+          <div className="review-card">
+            <h3>Utku</h3>
+            <p>“Bence iyi.”</p>
+          </div>
+          <div className="review-card">
+            <h3>Oltan</h3>
+            <p>“👎.”</p>
+          </div>
+          <div className="review-card">
+            <h3>Elise</h3>
+            <p>
+              “A fantastic game with great depth. Every decision opens up new
+              paths and possibilities!”
+            </p>
+          </div>
+        </div>
       </section>
     </div>
   );

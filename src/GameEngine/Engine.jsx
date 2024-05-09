@@ -3,6 +3,7 @@ import LifeStage from "./LifeStage";
 import "./Engine.css";
 import LoadingAnimation from "../LoadingAnimation";
 import choices from "./choices"; // Adjust the path based on where you placed choices.js
+import sadEndingImage from "../assets/sad-ending.jpg";
 
 function Engine() {
   const [animating, setAnimating] = useState(false);
@@ -108,10 +109,13 @@ function Engine() {
   if (showMoneyOutWarning) {
     return (
       <div className="money-out-warning">
-        <img src="path/to/your/funny/image.jpg" alt="Oops! No money left!" />
-        <p>Uh oh! Looks like you've run out of funds! Better luck next life!</p>
+        <img src={sadEndingImage} alt="Oops! No money left!" />
+        <p>
+          Oh! Görünüşe göre paranı iyi ayarlayamadın. Gelecek sefer bir karar
+          almadan önce bunu başaracak paran olduğuna emin ol.
+        </p>
         <button onClick={restartGame} className="restart-button">
-          Restart Game
+          Yeniden Başlayalım
         </button>
       </div>
     );
