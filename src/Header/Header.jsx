@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";
 
@@ -29,7 +29,7 @@ function Header() {
       <div className="header" ref={headerRef}>
         <div className="logo-container">
           <Link to="/" className="logo-link">
-            <p className="logo-item">🐰 Carrot Crossroads</p>
+            <p className="logo-item">🥕 Carrot Crossroads</p>
           </Link>
         </div>
         <div className="menu-toggle" onClick={toggleMenu}>

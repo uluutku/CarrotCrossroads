@@ -121,7 +121,7 @@
 
 .start-game-btn:hover,
 .start-game-btn:focus {
-  background-color: darkblue;
+  background-color: rgb(100, 128, 0);
   transform: scale(1.1);
 }
 
