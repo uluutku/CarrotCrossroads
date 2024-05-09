@@ -14,6 +14,14 @@ function Engine() {
   const [happiness, setHappiness] = useState(0);
   const [history, setHistory] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [showMoneyOutWarning, setShowMoneyOutWarning] = useState(false); // New state for showing the warning
+
+  useEffect(() => {
+    if (money == 0 && health > 0) {
+      setHealth(0);
+      setShowMoneyOutWarning(true); // Show warning instead of alert
+    }
+  }, [money, health]);
 
   useEffect(() => {
     if (loading) {
@@ -61,6 +69,19 @@ function Engine() {
       .slice(0, 2);
   };
 
+  const restartGame = () => {
+    setAnimating(false);
+    setCurrentDecision(null);
+    setAge(1);
+    setHealth(100);
+    setMoney(1);
+    setLove(0);
+    setHappiness(0);
+    setHistory([]);
+    setLoading(false);
+    setShowMoneyOutWarning(false);
+  };
+
   const handleDecision = (choice) => {
     setCurrentDecision(choice);
     setAnimating(true);
@@ -84,9 +105,16 @@ function Engine() {
     );
   };
 
-  if (money == 0 && health > 0) {
-    setHealth(0);
-    alert("Paranız bitti! Yapı kredi organlarınızı hacize geliyor..");
+  if (showMoneyOutWarning) {
+    return (
+      <div className="money-out-warning">
+        <img src="path/to/your/funny/image.jpg" alt="Oops! No money left!" />
+        <p>Uh oh! Looks like you've run out of funds! Better luck next life!</p>
+        <button onClick={restartGame} className="restart-button">
+          Restart Game
+        </button>
+      </div>
+    );
   }
 
   if (age > 100) {
