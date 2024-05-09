@@ -194,7 +194,7 @@ function Engine() {
       <div className="game-page">
         <div className="game-container">
           <header>
-            <h1>Davşan Hayantı</h1>
+            <h1>Tavşanın Durumu</h1>
             <div className="stats">
               <p>Yaş: {age}</p>
               <p>Sağlık: {health}🩺</p>
@@ -205,7 +205,7 @@ function Engine() {
           </header>
           <section>
             {animating ? (
-              <div className="loading">Zaman geşiyor...</div>
+              <div className="loading">Zaman geçiyor...</div>
             ) : (
               <LifeStage
                 choices={filterChoices()}
