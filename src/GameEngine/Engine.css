@@ -2,8 +2,8 @@ body {
   font-family: "Press Start 2P", system-ui;
   font-weight: 400;
   font-style: normal;
-  background-color: #2d004e; /* Deep purple background for body */
-  color: #f7f7f7; /* Light grey text color for contrast */
+  background-color: #2d004e;
+  color: #f7f7f7;
   min-height: 100svh;
 }
 
@@ -139,17 +139,17 @@ section {
   }
 
   .money-out-warning p {
-    font-size: 0.6em; /* Adjust font size for smaller screens */
+    font-size: 0.6em;
   }
 
   .money-out-warning img {
-    width: 80%; /* Adjust image size for smaller screens */
+    width: 80%;
   }
 
   .restart-button {
     margin-top: 3svh;
-    padding: 20px 30px; /* Adjust button padding for smaller screens */
-    font-size: 0.6em; /* Adjust button font size for smaller screens */
+    padding: 20px 30px;
+    font-size: 0.6em;
     width: 80%;
     margin-bottom: 10svh;
   }

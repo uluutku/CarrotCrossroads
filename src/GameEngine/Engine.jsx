@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import LifeStage from "./LifeStage";
 import "./Engine.css";
 import LoadingAnimation from "../LoadingAnimation";
-import choices from "./choices"; // Adjust the path based on where you placed choices.js
+import choices from "./choices";
 import sadEndingImage from "../assets/sad-ending.jpg";
 
 function Engine() {
@@ -15,12 +15,12 @@ function Engine() {
   const [happiness, setHappiness] = useState(0);
   const [history, setHistory] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [showMoneyOutWarning, setShowMoneyOutWarning] = useState(false); // New state for showing the warning
+  const [showMoneyOutWarning, setShowMoneyOutWarning] = useState(false);
 
   useEffect(() => {
     if (money == 0 && health > 0) {
       setHealth(0);
-      setShowMoneyOutWarning(true); // Show warning instead of alert
+      setShowMoneyOutWarning(true);
     }
   }, [money, health]);
 
@@ -109,13 +109,13 @@ function Engine() {
   if (showMoneyOutWarning) {
     return (
       <div className="money-out-warning">
-        <img src={sadEndingImage} alt="Oops! No money left!" />
+        <img src={sadEndingImage} alt="Oops! Bu karara paran yetmedi!" />
         <p>
           Oh! Görünüşe göre paranı iyi ayarlayamadın. Gelecek sefer bir karar
           almadan önce bunu başaracak paran olduğuna emin ol.
         </p>
         <button onClick={restartGame} className="restart-button">
-          Yeniden Başlayalım
+          Yeniden Başla
         </button>
       </div>
     );
