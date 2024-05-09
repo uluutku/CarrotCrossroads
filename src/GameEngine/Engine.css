@@ -76,6 +76,7 @@ header h1 {
   font-size: 1.5em;
   text-align: center;
   z-index: 1000;
+  margin-bottom: 150px;
 }
 
 .money-out-warning img {
@@ -138,7 +139,7 @@ section {
   }
 
   .money-out-warning p {
-    font-size: 0.9em; /* Adjust font size for smaller screens */
+    font-size: 0.6em; /* Adjust font size for smaller screens */
   }
 
   .money-out-warning img {
@@ -148,8 +149,9 @@ section {
   .restart-button {
     margin-top: 3svh;
     padding: 20px 30px; /* Adjust button padding for smaller screens */
-    font-size: 0.9em; /* Adjust button font size for smaller screens */
+    font-size: 0.6em; /* Adjust button font size for smaller screens */
     width: 80%;
+    margin-bottom: 10svh;
   }
 }
 
