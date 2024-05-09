@@ -4,7 +4,7 @@ body {
   font-style: normal;
   background-color: #2d004e; /* Deep purple background for body */
   color: #f7f7f7; /* Light grey text color for contrast */
-  min-height: 100vh;
+  min-height: 100svh;
 }
 
 .game-page {
@@ -12,7 +12,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 100svh;
 }
 
 .game-page .game-container {
@@ -36,7 +36,7 @@ header {
 
 header h1 {
   font-size: 24px;
-  margin-bottom: 5vh;
+  margin-bottom: 5svh;
 }
 
 .stats {
@@ -146,7 +146,7 @@ section {
   }
 
   .restart-button {
-    margin-top: 3vh;
+    margin-top: 3svh;
     padding: 20px 30px; /* Adjust button padding for smaller screens */
     font-size: 0.9em; /* Adjust button font size for smaller screens */
     width: 80%;

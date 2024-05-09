@@ -6,13 +6,13 @@
 
 /* Full page landing with snap scroll effect */
 .landing-page {
-  height: 100vh;
+  height: 100svh;
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
 }
 
 .landing-page > section {
-  height: 100vh;
+  height: 100svh;
   scroll-snap-align: start;
   display: flex;
   flex-direction: column;
@@ -64,7 +64,7 @@
   border-radius: 10px;
   padding: 30px; /* Increased padding for better spacing */
   width: 25vw;
-  min-height: 25vh;
+  min-height: 25svh;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   color: #fff;
   font-size: 1rem; /* Adjust font size as necessary */
@@ -157,7 +157,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 30vh;
+  min-height: 30svh;
   background-color: #0e121ce3;
   border: 2px solid #cccccc79;
   border-radius: 8px;
@@ -173,9 +173,9 @@
   }
 
   .hero-title-container {
-    margin-top: 5vh;
+    margin-top: 5svh;
     border-radius: 10px;
-    height: 20vh;
+    height: 20svh;
     display: flex;
     text-align: center;
     justify-content: center;
@@ -188,7 +188,7 @@
     width: 90%;
     padding: 30px;
     width: 90%;
-    min-height: 40vh;
+    min-height: 40svh;
     border: 2px solid #ccc;
     font-size: 1rem;
     line-height: 1.6;
@@ -225,9 +225,9 @@
   }
 
   .review-card {
-    margin-top: 2vh;
+    margin-top: 2svh;
     min-width: 80vw;
-    min-height: 10vh;
+    min-height: 10svh;
     background-color: #0e121ce3;
     border: 2px solid #ccc;
     border-radius: 8px;
