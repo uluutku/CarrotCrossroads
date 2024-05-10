@@ -184,11 +184,15 @@ function Engine() {
           <header>
             <h1>Tavşanın Durumu</h1>
             <div className="stats">
-              <p>Yaş: {age}🧒🏼</p>
-              <p>Sağlık: {health}🫀</p>
-              <p>Para: {money}💸</p>
-              <p>Aşk: {love}💖</p>
-              <p>Mutluluk: {happiness}🙂</p>
+              <p className={age < 18 ? "low-stat" : ""}>Yaş: {age}🧒🏼</p>
+              <p className={health < 20 ? "low-stat" : ""}>
+                Sağlık: {health}🫀
+              </p>
+              <p className={money <= 500 ? "low-stat" : ""}>Para: {money}💸</p>
+              <p className={love < 0 ? "low-stat" : ""}>Aşk: {love}💖</p>
+              <p className={happiness < -30 ? "low-stat" : ""}>
+                Mutluluk: {happiness}🙂
+              </p>
             </div>
           </header>
           <section>

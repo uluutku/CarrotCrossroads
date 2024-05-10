@@ -15,6 +15,21 @@ body {
   min-height: 100vh;
 }
 
+.low-stat {
+  color: red;
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
 .game-page .game-container {
   font-family: "Press Start 2P", system-ui;
   color: #f7f7f7;
