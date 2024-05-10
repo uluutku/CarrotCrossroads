@@ -3,7 +3,13 @@ import LifeStage from "./LifeStage";
 import "./Engine.css";
 import LoadingAnimation from "../LoadingAnimation";
 import choices from "./choices";
-import sadEndingImage from "../assets/sad-ending.jpg";
+import generalGoodEndingImage from "../assets/ending-images/general-good-ending.jpeg";
+import oldGoodEndingImage from "../assets/ending-images/old-good-ending.jpeg";
+//import generalSadEndingImage from "../assets/ending-images/general-sad-ending.jpg";
+import lowHappinessEndingImage from "../assets/ending-images/low-happiness-ending.jpeg";
+import lowHealthEndingImage from "../assets/ending-images/low-health-ending.jpeg";
+import lowMoneyEndingImage from "../assets/ending-images/low-money-ending.jpeg";
+import bissEndingImage from "../assets/ending-images/biss-ending.jpeg";
 
 function Engine() {
   const [animating, setAnimating] = useState(false);
@@ -15,12 +21,10 @@ function Engine() {
   const [happiness, setHappiness] = useState(0);
   const [history, setHistory] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [showMoneyOutWarning, setShowMoneyOutWarning] = useState(false);
 
   useEffect(() => {
     if (money == 0 && health > 0) {
       setHealth(0);
-      setShowMoneyOutWarning(true);
     }
   }, [money, health]);
 
@@ -80,7 +84,6 @@ function Engine() {
     setHappiness(0);
     setHistory([]);
     setLoading(false);
-    setShowMoneyOutWarning(false);
   };
 
   const handleDecision = (choice) => {
@@ -106,86 +109,71 @@ function Engine() {
     );
   };
 
-  if (showMoneyOutWarning) {
+  const getEndGameMessage = () => {
+    if (money <= 0) {
+      return {
+        image: lowMoneyEndingImage,
+        message:
+          "Oh! Görünüşe göre paranı iyi ayarlayamadın. Gelecek sefer bir karar almadan önce bunu başaracak paran olduğuna emin ol.",
+      };
+    }
+
+    if (happiness >= 9999) {
+      return {
+        image: bissEndingImage,
+        message: "Bosphorus ISS'de işe başladın! Daha ne olsun :)",
+      };
+    }
+
+    if (happiness <= -50) {
+      return {
+        image: lowHappinessEndingImage,
+        message:
+          "Üzgünüm! Çok mutsuz oluğundan alkol bağımlısı oldun. Daha iyi kararlar vermek için yeniden yeniden dene.",
+      };
+    }
+
+    if (age >= 80) {
+      return {
+        image: oldGoodEndingImage,
+        message: "Oyun bitti! 100 yaşına ulaştın!",
+      };
+    }
+    if (health <= 0) {
+      let image = lowHealthEndingImage;
+      let message = `Sağlık sorunların sebebi ile ${age} yaşında buralardan göçtün. Daha iyi kararlar vermek için yeniden yeniden dene.`;
+      if (happiness >= 100 || love >= 100) {
+        image = generalGoodEndingImage;
+        message = `Tebrikler! Sağlık sorunların sebebi ile ${age} yaşında buralardan göçtün ama kısa ama mutlu ve sevgi dolu bir ömür yaşadın!`;
+      } else if (happiness < 50 && love < 50) {
+        image = lowHealthEndingImage;
+        message = `Üzgünüm! Mutsuz bir hayat yaşadın ve sağlık sorunların sebebi ile ${age} yaşında buralardan göçtün. Daha iyi kararlar vermek için yeniden yeniden dene.`;
+      }
+      return {
+        image,
+        message,
+      };
+    }
+    return null;
+  };
+
+  const endGameMessage = getEndGameMessage();
+  if (endGameMessage) {
     return (
-      <div className="money-out-warning">
-        <img src={sadEndingImage} alt="Oops! Bu karara paran yetmedi!" />
-        <p>
-          Oh! Görünüşe göre paranı iyi ayarlayamadın. Gelecek sefer bir karar
-          almadan önce bunu başaracak paran olduğuna emin ol.
-        </p>
+      <div className="game-over">
+        {endGameMessage.image && (
+          <img
+            src={endGameMessage.image}
+            className="game-over-image"
+            alt="End game"
+          />
+        )}
+        <p className="ending-message-text">{endGameMessage.message}</p>
         <button onClick={restartGame} className="restart-button">
           Yeniden Başla
         </button>
       </div>
     );
-  }
-
-  if (age > 100) {
-    return <div className="game-over">Oyun bitti! 100 yaşına ulaştın!</div>;
-  } else if (age > 77 && health <= 0) {
-    if (happiness >= 50 && love >= 50) {
-      return (
-        <div className="game-over">
-          Tebrikler! Uzun ve mutlu bir ömür yaşadın!
-        </div>
-      );
-    }
-    if (happiness < 50 && love >= 50) {
-      return (
-        <div className="game-over">
-          Tebrikler! Uzun ve sevgi dolu bir ömür yaşadın!
-        </div>
-      );
-    }
-    if (happiness >= 50 && love < 50) {
-      return (
-        <div className="game-over">
-          Tebrikler! Uzun ve mutlu bir ömür yaşadın!
-        </div>
-      );
-    }
-    if (happiness < 50 && love < 50) {
-      return (
-        <div className="game-over">
-          Uzun ama kötü bir ömür yaşadın gibi görünüyor. Uzun yaşamak marifet
-          değil. Daha iyi kararlar vermek için yeniden başla.
-        </div>
-      );
-    }
-  } else if (health <= 0) {
-    if (happiness >= 50 && love >= 50) {
-      return (
-        <div className="game-over">
-          Tebrikler! Kısa ama mutlu ve sevgi dolu bir ömür yaşadın! Gelecek
-          sefer para hesabını daha iyi yapmayı dene.
-        </div>
-      );
-    }
-    if (happiness < 50 && love >= 50) {
-      return (
-        <div className="game-over">
-          Tebrikler! Kısa ama sevgi dolu bir ömür yaşadın! Gelecek sefer para
-          hesabını daha iyi yapmayı dene.
-        </div>
-      );
-    }
-    if (happiness >= 50 && love < 50) {
-      return (
-        <div className="game-over">
-          Tebrikler! Kısa ama mutlu bir ömür yaşadın! Gelecek sefer para
-          hesabını daha iyi yapmayı dene.
-        </div>
-      );
-    }
-    if (happiness < 50 && love < 50) {
-      return (
-        <div className="game-over">
-          Kısa ve kötü bir ömür yaşadın, daha iyi kararlar vermek için yeniden
-          başla. Gelecek sefer para hesabını daha iyi yapmayı dene.
-        </div>
-      );
-    }
   }
 
   return (
@@ -196,10 +184,10 @@ function Engine() {
           <header>
             <h1>Tavşanın Durumu</h1>
             <div className="stats">
-              <p>Yaş: {age}</p>
-              <p>Sağlık: {health}🩺</p>
+              <p>Yaş: {age}🧒🏼</p>
+              <p>Sağlık: {health}🫀</p>
               <p>Para: {money}💸</p>
-              <p>Aşk: {love} 💌</p>
+              <p>Aşk: {love}💖</p>
               <p>Mutluluk: {happiness}🙂</p>
             </div>
           </header>

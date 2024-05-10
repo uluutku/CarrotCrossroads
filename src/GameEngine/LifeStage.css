@@ -17,7 +17,7 @@
   justify-content: center;
   height: 100%;
   width: 100%;
-  background: #2b7c23;
+  background-color: #a9a01f;
   border: 3px solid #333;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -28,7 +28,7 @@
 
 .choice-card:hover {
   transform: translateY(-5px);
-  background: #37aa2c;
+  background-color: #c5ba23;
   border-color: #555;
 }
 
@@ -36,7 +36,7 @@
   font-family: "Press Start 2P", system-ui;
   font-weight: 400;
   font-style: normal;
-  color: #d3ebe7; /* Light grey text color for contrast */
+  color: #d3ebe7;
   padding: 20px;
   text-align: center;
   margin: 0;
@@ -58,7 +58,6 @@
   background: #444;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .life-stage {
     flex-direction: column;
@@ -69,7 +68,6 @@
   }
 }
 
-/* Animations */
 @keyframes fadeIn {
   from {
     opacity: 0;

@@ -12,22 +12,23 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100svh;
+  min-height: 100vh;
 }
 
 .game-page .game-container {
   font-family: "Press Start 2P", system-ui;
   color: #f7f7f7;
-  background: #12152bd2;
+  background: rgba(18, 21, 43, 0.82);
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  box-shadow: 0 0 10px rgba(50, 30, 60, 0.5); /* Purple shadow for depth */
+  box-shadow: 0 0 20px rgba(50, 30, 60, 0.75);
   border-radius: 20px;
+  backdrop-filter: blur(5px);
 }
 
 header {
-  background: #17022796;
+  background: rgba(23, 2, 39, 0.58);
   color: #f7f7f7;
   padding: 10px 20px;
   border-radius: 5px;
@@ -36,7 +37,7 @@ header {
 
 header h1 {
   font-size: 24px;
-  margin-bottom: 5svh;
+  margin-bottom: 0;
 }
 
 .stats {
@@ -46,64 +47,35 @@ header h1 {
 }
 
 .stats p {
-  margin: 0 10;
+  margin: 0 10px;
   font-size: 16px;
-  color: #f7f7f7; /* Light grey text for stats to stand out */
 }
 
 .loading {
   font-size: 18px;
-  color: #f7f7f7;
-  background-color: #70c822d0; /* A lighter shade of purple for loading */
+  background-color: rgba(112, 200, 34, 0.82);
   padding: 10px;
   border-radius: 5px;
   text-align: center;
   animation: blinker 1.5s linear infinite;
 }
 
-.money-out-warning {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: white;
-  font-size: 1.5em;
-  text-align: center;
-  z-index: 1000;
-  margin-bottom: 150px;
-}
-
-.money-out-warning img {
-  width: 30%;
-  margin-bottom: 20px;
-}
-
-.money-out-warning p {
-  width: 80%;
-  margin: 0 auto;
-  padding: 20px;
-}
-
 .restart-button {
   font-family: "Press Start 2P", system-ui;
-  padding: 10px 40px;
-  font-size: 1.2em;
+  margin-top: 30px;
+  padding: 20px 30px;
+  font-size: 1.2rem;
   color: #fff;
-  background-color: #797215;
+  background-color: #a9a01f;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease;
 }
 
 .restart-button:hover {
-  background-color: #0056b3;
+  background-color: #c5ba23;
+  transform: scale(1.1);
 }
 
 @keyframes blinker {
@@ -116,18 +88,113 @@ section {
   margin-top: 20px;
 }
 
-.game-over {
-  font-size: 24px;
+.game-page {
+  background: url("../assets/engine-background.jpg") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.game-page .game-container {
+  font-family: "Press Start 2P", system-ui;
   color: #f7f7f7;
-  background-color: #5a009d;
+  background: rgba(18, 21, 43, 0.82); /* More transparency for depth */
+  max-width: 90vw;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(50, 30, 60, 0.75); /* Deeper purple shadow for more depth */
+  border-radius: 20px;
+  backdrop-filter: blur(5px); /* Modern blur effect */
+}
+
+header {
+  background: rgba(23, 2, 39, 0.58); /* More transparency */
+  color: #f7f7f7;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 24px;
+  margin-bottom: 0; /* adjusted spacing */
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.stats p {
+  margin: 0 10px;
+  font-size: 16px;
+}
+
+.loading {
+  font-size: 18px;
+  background-color: rgba(112, 200, 34, 0.82);
   padding: 10px;
   border-radius: 5px;
   text-align: center;
-  animation: bounce 1s infinite;
+  animation: blinker 1.5s linear infinite;
 }
 
-/* Responsive Design */
+section {
+  margin-top: 20px;
+}
+
+.game-over {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #f7f7f7;
+  font-size: 24px;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  animation: none;
+}
+
+.game-over-image {
+  height: 50vh;
+  width: auto;
+}
+
+.ending-message-text {
+  width: 80vw;
+  margin-bottom: 5vh;
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
+  .game-over-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .ending-message-text {
+    width: 95%;
+    margin-bottom: 3vh;
+    font-size: 0.9rem;
+  }
+
+  .restart-button {
+    margin-top: 20px;
+    padding: 20px 20px;
+    font-size: 0.8rem;
+  }
+
   .stats {
     flex-direction: column;
     align-items: center;
@@ -136,56 +203,5 @@ section {
   .stats p {
     font-size: 14px;
     margin-bottom: 5px;
-  }
-
-  .money-out-warning p {
-    font-size: 0.6em;
-  }
-
-  .money-out-warning img {
-    width: 80%;
-  }
-
-  .restart-button {
-    margin-top: 3svh;
-    padding: 20px 30px;
-    font-size: 0.6em;
-    width: 80%;
-    margin-bottom: 10svh;
-  }
-}
-
-/* Animations and Transitions */
-.stats p {
-  transition: transform 0.2s ease-in-out;
-}
-
-.stats p:hover {
-  transform: scale(1.1);
-}
-
-.restart-button:hover {
-  background-color: #0056b3;
-}
-
-@keyframes blinker {
-  50% {
-    opacity: 0;
-  }
-}
-
-@keyframes bounce {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-10px);
-  }
-  60% {
-    transform: translateY(-5px);
   }
 }
