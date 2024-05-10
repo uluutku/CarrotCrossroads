@@ -96,7 +96,7 @@ function Engine() {
           newMoney = 0;
         }
         setHealth(
-          (h) => h + choice.immediateEffects.health - (age >= 18 ? 5 : 0)
+          (h) => h + choice.immediateEffects.health - (age >= 18 ? 3 : 0)
         );
         setMoney(newMoney);
         setLove(love + choice.immediateEffects.love);
@@ -105,7 +105,7 @@ function Engine() {
         setAge(age + 1);
         setAnimating(false);
       },
-      age < 18 ? 300 : 2000
+      age < 18 ? 100 : 2000
     );
   };
 
@@ -129,14 +129,14 @@ function Engine() {
       return {
         image: lowHappinessEndingImage,
         message:
-          "Üzgünüm! Çok mutsuz oluğundan alkol bağımlısı oldun. Daha iyi kararlar vermek için yeniden yeniden dene.",
+          "Üzgünüm! Kararından çok mutsuz oluğundan alkol bağımlısı oldun. Daha iyi kararlar vermek için yeniden yeniden dene.",
       };
     }
 
-    if (age >= 80) {
+    if (age >= 60) {
       return {
         image: oldGoodEndingImage,
-        message: "Oyun bitti! 100 yaşına ulaştın!",
+        message: "Oyun bitti! 60 yaşına ulaştın!",
       };
     }
     if (health <= 0) {
@@ -144,7 +144,7 @@ function Engine() {
       let message = `Sağlığın sebebi ile ${age} yaşında buralardan göçtün. Daha iyi kararlar vermek için yeniden yeniden dene.`;
       if (happiness >= 100 || love >= 100) {
         image = generalGoodEndingImage;
-        message = `Tebrikler! Sağlık sorunların sebebi ile ${age} yaşında buralardan göçtün ama kısa ama mutlu ve sevgi dolu bir ömür yaşadın!`;
+        message = `Tebrikler! Sağlık sorunların sebebi ile ${age} yaşında buralardan göçtün yine de mutlu ve sevgi dolu bir ömür yaşadın!`;
       } else if (happiness < 50 && love < 50) {
         image = lowHealthEndingImage;
         message = `Üzgünüm! Mutsuz bir hayat yaşadın ve sağlık sorunların sebebi ile ${age} yaşında buralardan göçtün. Daha iyi kararlar vermek için yeniden yeniden dene.`;

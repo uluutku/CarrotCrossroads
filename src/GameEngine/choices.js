@@ -1,48 +1,48 @@
 const choices = [
   {
-    text: "İskoçya'da Doğ",
+    text: "İskoçya'da Doğ (Orta)",
     ageRange: { min: 0, max: 1 },
     immediateEffects: { health: 40, money: 800, love: 15, happiness: 25 },
     longTermEffects: [],
   },
   {
-    text: "Kanada'da Doğ",
+    text: "Kanada'da Doğ (Kolay)",
     ageRange: { min: 0, max: 1 },
-    immediateEffects: { health: 40, money: 1000, love: 20, happiness: 35 },
+    immediateEffects: { health: 60, money: 1000, love: 20, happiness: 35 },
     longTermEffects: [],
   },
   {
-    text: "Brezilya'da Doğ",
+    text: "Brezilya'da Doğ (Zor)",
     ageRange: { min: 0, max: 1 },
     immediateEffects: { health: 30, money: 300, love: 10, happiness: 10 },
     longTermEffects: [],
   },
   {
-    text: "Japonya'da Doğ",
+    text: "Japonya'da Doğ (Kolay)",
     ageRange: { min: 0, max: 1 },
     immediateEffects: { health: 60, money: 1000, love: 5, happiness: 40 },
     longTermEffects: [],
   },
   {
-    text: "Avustralya'da Doğ",
+    text: "Avustralya'da Doğ (Orta)",
     ageRange: { min: 0, max: 1 },
-    immediateEffects: { health: 30, money: 500, love: 0, happiness: 5 },
+    immediateEffects: { health: 50, money: 500, love: 0, happiness: 5 },
     longTermEffects: [],
   },
   {
-    text: "Türkiyede Doğ",
+    text: "Türkiyede Doğ (Extreme)",
     ageRange: { min: 0, max: 1 },
-    immediateEffects: { health: 0, money: 1000, love: 0, happiness: 0 },
+    immediateEffects: { health: 0, money: 300, love: 0, happiness: 0 },
     longTermEffects: [],
   },
   {
-    text: "Amerikada Doğ",
+    text: "Amerikada Doğ (Kolay)",
     ageRange: { min: 0, max: 1 },
-    immediateEffects: { health: -20, money: 800, love: 30, happiness: 40 },
+    immediateEffects: { health: 30, money: 800, love: 30, happiness: 40 },
     longTermEffects: [],
   },
   {
-    text: "Almanyada Doğ",
+    text: "Almanyada Doğ (Kolay)",
     ageRange: { min: 0, max: 1 },
     immediateEffects: { health: 50, money: 900, love: 10, happiness: 30 },
     longTermEffects: [],
@@ -128,7 +128,7 @@ const choices = [
   {
     text: "Bir komedi kulübünde stand-up yapmayı dene",
     ageRange: { min: 18, max: 99 },
-    immediateEffects: { health: 0, money: 0, love: 0, happiness: 10 },
+    immediateEffects: { health: 0, money: 0, love: 0, happiness: -200 },
     longTermEffects: [],
   },
   {
@@ -172,7 +172,7 @@ const choices = [
   {
     text: "Profesyonel bir dansçı olmayı dene",
     ageRange: { min: 18, max: 35 },
-    immediateEffects: { health: -5, money: -500, love: 15, happiness: 25 },
+    immediateEffects: { health: -5, money: 0, love: 15, happiness: -200 },
     longTermEffects: [
       { effect: { money: 300, happiness: 20 }, duration: 10, startYear: 3 },
     ],
@@ -329,7 +329,29 @@ const choices = [
   },
   {
     text: "BISS'te işe başla!",
-    ageRange: { min: 20, max: 30 },
+    ageRange: { min: 19, max: 40 },
+    immediateEffects: {
+      health: 99999,
+      money: 99999,
+      love: 99999,
+      happiness: 99999,
+    },
+    longTermEffects: [],
+  },
+  {
+    text: "BISS'te işe başla!",
+    ageRange: { min: 19, max: 40 },
+    immediateEffects: {
+      health: 99999,
+      money: 99999,
+      love: 99999,
+      happiness: 99999,
+    },
+    longTermEffects: [],
+  },
+  {
+    text: "BISS'te işe başla!",
+    ageRange: { min: 19, max: 40 },
     immediateEffects: {
       health: 99999,
       money: 99999,
@@ -403,7 +425,7 @@ const choices = [
     longTermEffects: [],
   },
   {
-    text: "Evden çalış. Ancak ergonomik bir setup kullan.",
+    text: "Evden çalış. Ancak ergonomik olmayan bir setup kullan.",
     ageRange: { min: 18, max: 99 },
     immediateEffects: { health: -15, money: 0, love: 0, happiness: 5 },
     longTermEffects: [],

@@ -169,6 +169,7 @@ section {
 .game-over-image {
   height: 50vh;
   width: auto;
+  margin-bottom: 3vh;
 }
 
 .ending-message-text {
