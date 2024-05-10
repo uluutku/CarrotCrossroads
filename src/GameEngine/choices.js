@@ -341,7 +341,7 @@ const choices = [
   {
     text: "Organik çiftlik kur",
     ageRange: { min: 25, max: 60 },
-    immediateEffects: { health: 10, money: -20000, love: 0, happiness: 15 },
+    immediateEffects: { health: 10, money: -2000, love: 0, happiness: 15 },
     longTermEffects: [
       { effect: { money: 500, health: 20 }, duration: 25, startYear: 5 },
     ],
