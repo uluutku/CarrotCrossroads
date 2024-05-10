@@ -185,12 +185,16 @@ function Engine() {
             <h1>Tavşanın Durumu</h1>
             <div className="stats">
               <p className={age < 18 ? "low-stat" : ""}>Yaş: {age}🧒🏼</p>
-              <p className={health < 20 ? "low-stat" : ""}>
+              <p className={age >= 18 && health < 20 ? "low-stat" : ""}>
                 Sağlık: {health}🫀
               </p>
-              <p className={money <= 500 ? "low-stat" : ""}>Para: {money}💸</p>
-              <p className={love < 0 ? "low-stat" : ""}>Aşk: {love}💖</p>
-              <p className={happiness < -30 ? "low-stat" : ""}>
+              <p className={age >= 18 && money <= 500 ? "low-stat" : ""}>
+                Para: {money}💸
+              </p>
+              <p className={age >= 18 && love < 0 ? "low-stat" : ""}>
+                Aşk: {love}💖
+              </p>
+              <p className={age >= 18 && happiness < -30 ? "low-stat" : ""}>
                 Mutluluk: {happiness}🙂
               </p>
             </div>
