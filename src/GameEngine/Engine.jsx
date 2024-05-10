@@ -41,12 +41,12 @@ function Engine() {
           });
           setHealth((h) => {
             if (age >= 18) {
-              h -= 10;
+              h -= 5;
             }
             return h;
           });
         },
-        age < 18 ? 300 : 2000
+        age < 18 ? 200 : 2000
       );
 
       return () => clearInterval(interval);
@@ -139,7 +139,7 @@ function Engine() {
         message: "Oyun bitti! 60 yaşına ulaştın!",
       };
     }
-    if (health <= 0) {
+    if (health <= 0 && age > 20) {
       let image = lowHealthEndingImage;
       let message = `Sağlığın sebebi ile ${age} yaşında buralardan göçtün. Daha iyi kararlar vermek için yeniden yeniden dene.`;
       if (happiness >= 100 || love >= 100) {
