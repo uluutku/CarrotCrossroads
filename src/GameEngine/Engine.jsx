@@ -136,10 +136,10 @@ function Engine() {
     if (age >= 60) {
       return {
         image: oldGoodEndingImage,
-        message: "Oyun bitti! 60 yaşına ulaştın!",
+        message: "Tebrikler! 60 yaşına ulaştın!",
       };
     }
-    if (health <= 0 && age > 20) {
+    if (health <= 0 && age > 25) {
       let image = lowHealthEndingImage;
       let message = `Sağlığın sebebi ile ${age} yaşında buralardan göçtün. Daha iyi kararlar vermek için yeniden yeniden dene.`;
       if (happiness >= 100 || love >= 100) {
@@ -147,7 +147,7 @@ function Engine() {
         message = `Tebrikler! Sağlık sorunların sebebi ile ${age} yaşında buralardan göçtün yine de mutlu ve sevgi dolu bir ömür yaşadın!`;
       } else if (happiness < 50 && love < 50) {
         image = lowHealthEndingImage;
-        message = `Üzgünüm! Mutsuz bir hayat yaşadın ve sağlık sorunların sebebi ile ${age} yaşında buralardan göçtün. Daha iyi kararlar vermek için yeniden yeniden dene.`;
+        message = `Üzgünüm! Mutsuz bir hayat yaşadın ve sağlık sorunların sebebi ile ${age} yaşında buralardan göçtün. Daha iyi kararlar vermek için  yeniden dene.`;
       }
       return {
         image,

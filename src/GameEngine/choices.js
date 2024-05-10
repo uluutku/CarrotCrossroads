@@ -48,7 +48,7 @@ const choices = [
     longTermEffects: [],
   },
   {
-    text: "Hindistanda Doğ",
+    text: "Hindistanda Doğ (Zor)",
     ageRange: { min: 0, max: 1 },
     immediateEffects: { health: 0, money: 200, love: 0, happiness: 0 },
     longTermEffects: [],
