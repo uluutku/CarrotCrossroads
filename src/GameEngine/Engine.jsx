@@ -121,7 +121,7 @@ function Engine() {
     if (happiness >= 9999) {
       return {
         image: bissEndingImage,
-        message: "Bosphorus ISS'de işe başladın! Daha ne olsun :)",
+        message: "Bosphorus ISS'de işe başladın! Daha ne olsun 😉",
       };
     }
 

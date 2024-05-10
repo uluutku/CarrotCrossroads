@@ -339,28 +339,6 @@ const choices = [
     longTermEffects: [],
   },
   {
-    text: "BISS'te işe başla!",
-    ageRange: { min: 19, max: 40 },
-    immediateEffects: {
-      health: 99999,
-      money: 99999,
-      love: 99999,
-      happiness: 99999,
-    },
-    longTermEffects: [],
-  },
-  {
-    text: "BISS'te işe başla!",
-    ageRange: { min: 19, max: 40 },
-    immediateEffects: {
-      health: 99999,
-      money: 99999,
-      love: 99999,
-      happiness: 99999,
-    },
-    longTermEffects: [],
-  },
-  {
     text: "Organik çiftlik kur",
     ageRange: { min: 25, max: 60 },
     immediateEffects: { health: 10, money: -20000, love: 0, happiness: 15 },
