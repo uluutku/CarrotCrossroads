@@ -15,10 +15,10 @@ function Engine() {
   const [animating, setAnimating] = useState(false);
   const [currentDecision, setCurrentDecision] = useState(null);
   const [age, setAge] = useState(1);
-  const [health, setHealth] = useState(100);
-  const [money, setMoney] = useState(1);
-  const [love, setLove] = useState(0);
-  const [happiness, setHappiness] = useState(0);
+  const [health, setHealth] = useState(10);
+  const [money, setMoney] = useState(10);
+  const [love, setLove] = useState(10);
+  const [happiness, setHappiness] = useState(10);
   const [history, setHistory] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -41,7 +41,7 @@ function Engine() {
           });
           setHealth((h) => {
             if (age >= 18) {
-              h -= 5; // Aging health decrease
+              h -= 10;
             }
             return h;
           });
@@ -78,10 +78,10 @@ function Engine() {
     setAnimating(false);
     setCurrentDecision(null);
     setAge(1);
-    setHealth(100);
-    setMoney(1);
-    setLove(0);
-    setHappiness(0);
+    setHealth(10);
+    setMoney(10);
+    setLove(10);
+    setHappiness(10);
     setHistory([]);
     setLoading(false);
   };
@@ -141,7 +141,7 @@ function Engine() {
     }
     if (health <= 0) {
       let image = lowHealthEndingImage;
-      let message = `Sağlık sorunların sebebi ile ${age} yaşında buralardan göçtün. Daha iyi kararlar vermek için yeniden yeniden dene.`;
+      let message = `Sağlığın sebebi ile ${age} yaşında buralardan göçtün. Daha iyi kararlar vermek için yeniden yeniden dene.`;
       if (happiness >= 100 || love >= 100) {
         image = generalGoodEndingImage;
         message = `Tebrikler! Sağlık sorunların sebebi ile ${age} yaşında buralardan göçtün ama kısa ama mutlu ve sevgi dolu bir ömür yaşadın!`;
